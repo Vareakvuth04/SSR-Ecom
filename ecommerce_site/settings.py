@@ -15,7 +15,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 #DEBUG = True
 DEBUG = False
 
-ALLOWED_HOSTS = ['squid-app-hnhb6.ondigitalocean.app', '206.189.88.92']
+ALLOWED_HOSTS = ['*']
 
 SECRET_KEY = os.environ.get('SECRET_KEY', 'fallback-secret-key')
 #DEBUG = os.environ.get('DEBUG', 'False') == 'True'
