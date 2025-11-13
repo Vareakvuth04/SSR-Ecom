@@ -2,7 +2,7 @@ import os
 import sys
 from pathlib import Path
 from django.contrib.messages import constants as messages
-import dj_database_url
+
 
 # ==========================
 #  BASE CONFIGURATION
@@ -57,22 +57,18 @@ WSGI_APPLICATION = 'ecommerce_site.wsgi.application'
 # ==========================
 #  DATABASE
 # ==========================
-#DATABASES = {
-#    'default': {
-#        'ENGINE': 'django.db.backends.postgresql',
-#        'NAME': 'ecommerce_site',
-#        'USER': 'postgres',
-#        'PASSWORD': '123',
-#        'HOST': 'localhost',
-#        'PORT': '5432',
-#    }
-#}
-
 DATABASES = {
-    'default': dj_database_url.config(
-        default=os.environ.get('DATABASE_URL')
-    )
+    'default': {
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'ecommerce_site',
+        'USER': 'postgres',
+        'PASSWORD': '123',
+        'HOST': 'localhost',
+        'PORT': '5432',
+    }
 }
+
+
 
 # ==========================
 #  PASSWORD VALIDATION
